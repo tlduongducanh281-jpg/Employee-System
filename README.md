@@ -64,3 +64,141 @@ The project also demonstrates software engineering practices through GitHub repo
 - Export query results to CSV
 - Consistent layout and navigation across screens
 # GUI screenshots
+
+
+# Enviroment setup
+***1. System requirements***
+* *Python*: 3.9 – 3.11 (3.10 recommended)
+* *MySQL Server*: 8.x (local or remote)
+* *pip*: latest (run pip install --upgrade pip)
+* *OS*: Windows / macOS / Linux
+* *Recommended*: MySQL Workbench or another GUI DB client for inspection
+
+***2. Project prerequisites***
+* schema.sql and seed.sql located in migrations/ (or app/db/)
+* .env for DB credentials (do *not* commit to VCS)
+* requirements.txt at repo root
+
+***3. Create & activate a Python virtual environment***
+```py
+# create venv python -m venv .venv
+# macOS / Linux source .venv/bin/activate
+# Windows (PowerShell) .venv\Scripts\Activate.ps1
+# Windows (cmd) .venv\Scripts\activate.bat
+```
+
+***4. Install Python dependencies***
+```py
+pip install --upgrade pip
+pip install -r
+requirements.txt
+```
+Suggested requirements.txt (adjust versions as needed):
+```py
+streamlit>=1.30.0
+mysql-connector-python>=8.0
+pandas>=2.0
+matplotlib>=3.8
+plotly>=5.18
+python-dotenv>=1.0```
+```
+
+***5. Environment variables***
+Create a .env file (example .env.example included in repo):
+```py
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_password_here
+DB_NAME=employee_manager_db
+```
+# Run instructions
+***1. Ensure MySQL Server is running***
+* *Linux/macOS:* sudo service mysql start (or use your distro’s service manager)
+* *Windows:* Start the MySQL / MySQL80 service via Services or MySQL Workbench.
+
+***2. Import schema and seed (see Migration Steps below)***
+Run migrations/schema.sql then migrations/seed.sql. 
+
+***3. Configure application***
+* Ensure .env exists and contains correct DB connection values.
+* Confirm app/db/connection.py reads env variables with python-dotenv (or otherwise).
+
+Example connection snippet (recommended):
+```py
+import os from dotenv
+import load_dotenv
+import mysql.connector load_dotenv()
+def get_db_connection():
+return mysql.connector.connect( host=os.getenv("DB_HOST", "localhost"), port=int(os.getenv("DB_PORT", 3306)), user=os.getenv("DB_USER"), password=os.getenv("DB_PASSWORD"), database=os.getenv("DB_NAME") )
+```
+***4. Run the Streamlit app***
+From project root where app.py (or main.py) lives:
+```py
+streamlit run app.py
+```
+***5. Validate the UI***
+Press Ctrl+C in the terminal running Streamlit.
+
+# Migration Steps — schema.sql & seed.sql
+***1. Quick checklist before migration***
+* MySQL server is running
+* You have DB credentials with privileges to CREATE DATABASE and CREATE TABLE (or use an existing empty DB)
+* .env set to use employee_manager_db (or change names accordingly)
+
+***2. Create database & tables (run schema.sql)***
+*Option A — Single CLI command (preferred for automation):*
+```py
+mysql -u root -p < migrations/schema.sql
+```
+This will run all statements in schema.sql which should:
+
+* CREATE DATABASE IF NOT EXISTS employee_manager_db;
+* USE employee_manager_db;
+* CREATE TABLE ... for Departments, Employees, Projects, Assignments (with PKs, FKs, UNIQUE constraints, NOT NULLs)
+
+*Option B — Manual via MySQL shell*
+```py
+mysql -u root -p # then, within mysql shell SOURCE /full/path/to/repo/migrations/schema.sql;
+```
+
+***3. Populate sample data (run seed.sql)***
+
+seed.sql must insert realistic sample data. The assignment asks for a larger seed for testing (suggested targets: >=150 employees, 5–8 departments, 6–10 projects, 400–800 assignments). The repo's seed.sql includes a prepared dataset.
+Run:
+```py
+mysql -u root -p employee_manager_db < migrations/seed.sql
+```
+Or in the mysql shell:
+```py
+USE employee_manager_db; SOURCE /full/path/to/repo/migrations/seed.sql;
+```
+
+***4. Verify schema & data***
+Connect with MySQL client or Workbench and run:
+```py
+USE employee_manager_db;
+SHOW TABLES;
+SELECT COUNT(*) FROM Employees;
+SELECT COUNT(*) FROM Departments;
+SELECT COUNT(*) FROM Projects;
+SELECT COUNT(*) FROM Assignments;
+-- spot-check a few rows SELECT * FROM Employees LIMIT 10; SELECT * FROM Assignments LIMIT 10;
+```
+***5. Common errors & fixes***
+
+* **ERROR 1045 (28000): Access denied** — incorrect DB credentials; update .env and re-try.
+* **Table already exists** — either the DB already has partial schema; drop the DB or run DROP DATABASE employee_manager_db; then re-run schema.sql if starting fresh.
+* *FK constraint errors when seeding* — ensure schema.sql executed before seed.sql, and that referential rows exist (e.g., Departments created before Employees that reference them).
+
+# Quick summary
+| Step                | Command                                                       |
+| ------------------- | ------------------------------------------------------------- |
+| Create environment  | python -m venv .venv                                          |
+| Install dependencies| pip install -r requirements.txt                               |
+| Import schema       | mysql -u root -p < migrations/schema.sql                      |
+| Import seed data    | mysql -u root -p employee_manager_db < migrations/seed.sql    |
+| Run Streamlit app   | streamlit run app.py                                          |
+
+
+
