@@ -63,7 +63,7 @@ The project also demonstrates software engineering practices through GitHub repo
 - Loading indicators and empty-state messages
 - Export query results to CSV
 - Consistent layout and navigation across screens
-# GUI screenshots
+# Screenshots of GUI, ERD image, and sample query outputs
 
 
 # Enviroment setup
