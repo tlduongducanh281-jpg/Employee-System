@@ -201,4 +201,5 @@ SELECT COUNT(*) FROM Assignments;
 | Run Streamlit app   | streamlit run app.py                                          |
 
 
-
+# Slides
+(http://gcanva.com/design/DAG6VTtk1_g/NF1qO8DyU-2zrzsD_OK2dw/edit?fbclid=IwY2xjawOjsaVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeFO3KZGe9eE8rlBXJ6CmZy3EC5C1IlGB6GafO1sZpwOv9czDKQY9-ps8b2tY_aem_LFzm_6N4Sf5ZnnRlvraNJA)
