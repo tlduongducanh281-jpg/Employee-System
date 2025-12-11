@@ -64,18 +64,31 @@ The project also demonstrates software engineering practices through GitHub repo
 - Export query results to CSV
 - Consistent layout and navigation across screens
 # Screenshots of GUI, ERD image, and sample query outputs
-<img width="874" height="723" alt="594967447_716245187816813_2941659690016909526_n" src="https://github.com/user-attachments/assets/62eff4fe-666e-4a4a-abc0-2ccb4c4e4fe9" />
+<img width="1861" height="867" alt="598647595_2108045869934524_3170864866143048313_n" src="https://github.com/user-attachments/assets/a801de99-65d1-47f9-bf22-90a7d68f38b1" />
 
-<img width="1299" height="385" alt="597188715_1749297392409171_4896768209641917567_n" src="https://github.com/user-attachments/assets/9f7988a3-d1af-4373-bc48-feb7e3024a93" />
+<img width="1856" height="857" alt="598601246_1384970666568032_3493814166686356868_n" src="https://github.com/user-attachments/assets/dc54bffb-1e11-4847-a37b-aa0a44d2355b" />
 
-<img width="1335" height="418" alt="597222869_2238418019981931_8574489349990692231_n" src="https://github.com/user-attachments/assets/998f5d7e-5d9e-4e6f-855f-2a327f385b2e" />
+<img width="1814" height="801" alt="598303693_1559859525627329_1754828862905764515_n" src="https://github.com/user-attachments/assets/dff2f4b8-e0e0-4c5b-a1e8-72cee0c50772" />
 
-# Enviroment setup<img width="1309" height="343" alt="592791526_838843745400697_4289667031202307656_n" src="https://github.com/user-attachments/assets/4591f3e1-9d6b-414c-bb7d-675f2374e437" />
+<img width="1871" height="796" alt="598184497_710764381727328_8025878082224350791_n" src="https://github.com/user-attachments/assets/f0daba02-8d0a-4864-beab-665c7be715a4" />
 
-<img width="1300" height="282" alt="594020409_1597054571613001_7688399012120492440_n" src="https://github.com/user-attachments/assets/75867693-954e-413f-8503-463f3f1c3850" />
+<img width="1834" height="804" alt="597892221_1769173007118272_3860849914572033342_n" src="https://github.com/user-attachments/assets/eeedbd6c-5456-47b2-a9bc-8bf692f638ec" />
 
-<img width="429" height="391" alt="591324223_1495201495944684_1979817309095699795_n (1)" src="https://github.com/user-attachments/assets/dc2e737c-c841-4139-bbdf-46130e340390" />
+<img width="1826" height="809" alt="597673022_1232374255397510_3964121771543471055_n" src="https://github.com/user-attachments/assets/da28c091-a6af-41b4-9d52-6c63829d9873" />
 
+<img width="1840" height="692" alt="597195428_3085887811571725_116261314857143279_n" src="https://github.com/user-attachments/assets/3b8fc0c4-84d3-409d-a254-12a9e2b135ce" />
+
+<img width="1850" height="581" alt="597048599_1615484353148990_4105076118216844554_n" src="https://github.com/user-attachments/assets/05ac5c7b-76d1-4b99-94f0-5554d7df70bc" />
+
+<img width="1844" height="738" alt="594854684_855093797010642_5187242631821262710_n" src="https://github.com/user-attachments/assets/3a2fb58f-dea2-488c-8895-dfd570f72f5c" />
+
+<img width="1838" height="828" alt="593452837_1550587606190389_6635808052783496073_n" src="https://github.com/user-attachments/assets/0255538d-c95f-4d50-80de-1b81495339e4" />
+
+<img width="1859" height="809" alt="593435593_1782030219122142_8803607834929657241_n" src="https://github.com/user-attachments/assets/d75da6ed-3e29-4530-a0e0-f0117339a586" />
+
+<img width="429" height="391" alt="591324223_1495201495944684_1979817309095699795_n (1)" src="https://github.com/user-attachments/assets/1719c99d-1d96-4cb0-a7a1-599e3dc2ceb3" />
+
+# Enviroment setup
 ***1. System requirements***
 * *Python*: 3.9 – 3.11 (3.10 recommended)
 * *MySQL Server*: 8.x (local or remote)
