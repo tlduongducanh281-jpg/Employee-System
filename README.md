@@ -63,10 +63,19 @@ The project also demonstrates software engineering practices through GitHub repo
 - Loading indicators and empty-state messages
 - Export query results to CSV
 - Consistent layout and navigation across screens
-# GUI screenshots
+# Screenshots of GUI, ERD image, and sample query outputs
+<img width="874" height="723" alt="594967447_716245187816813_2941659690016909526_n" src="https://github.com/user-attachments/assets/62eff4fe-666e-4a4a-abc0-2ccb4c4e4fe9" />
 
+<img width="1299" height="385" alt="597188715_1749297392409171_4896768209641917567_n" src="https://github.com/user-attachments/assets/9f7988a3-d1af-4373-bc48-feb7e3024a93" />
 
-# Enviroment setup
+<img width="1335" height="418" alt="597222869_2238418019981931_8574489349990692231_n" src="https://github.com/user-attachments/assets/998f5d7e-5d9e-4e6f-855f-2a327f385b2e" />
+
+# Enviroment setup<img width="1309" height="343" alt="592791526_838843745400697_4289667031202307656_n" src="https://github.com/user-attachments/assets/4591f3e1-9d6b-414c-bb7d-675f2374e437" />
+
+<img width="1300" height="282" alt="594020409_1597054571613001_7688399012120492440_n" src="https://github.com/user-attachments/assets/75867693-954e-413f-8503-463f3f1c3850" />
+
+<img width="429" height="391" alt="591324223_1495201495944684_1979817309095699795_n (1)" src="https://github.com/user-attachments/assets/dc2e737c-c841-4139-bbdf-46130e340390" />
+
 ***1. System requirements***
 * *Python*: 3.9 – 3.11 (3.10 recommended)
 * *MySQL Server*: 8.x (local or remote)
@@ -200,5 +209,12 @@ SELECT COUNT(*) FROM Assignments;
 | Import seed data    | mysql -u root -p employee_manager_db < migrations/seed.sql    |
 | Run Streamlit app   | streamlit run app.py                                          |
 
+
+# Slides
+(http://gcanva.com/design/DAG6VTtk1_g/NF1qO8DyU-2zrzsD_OK2dw/edit?fbclid=IwY2xjawOjsaVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeFO3KZGe9eE8rlBXJ6CmZy3EC5C1IlGB6GafO1sZpwOv9czDKQY9-ps8b2tY_aem_LFzm_6N4Sf5ZnnRlvraNJA)
+
+# PR evidence
+
+# Youtube linklink
 
 
